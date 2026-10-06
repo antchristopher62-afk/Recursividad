@@ -1,0 +1,142 @@
+/* Estilos generales */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f4f8;
+  color: #222222;
+  margin: 0;
+}
+
+/* Portada */
+
+header {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Menú */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #0b1c3f;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #2563eb;
+}
+
+/* Contenido principal */
+
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+section {
+  background-color: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #1e3a8a;
+  border-bottom: 3px solid #2563eb;
+  padding-bottom: 8px;
+}
+
+/* Cajas de ejemplos y diagramas */
+
+.caja {
+  background: #f8fafc;
+  border: 2px dashed #94a3b8;
+  border-radius: 12px;
+  padding: 18px;
+  font-family: Consolas, monospace;
+  white-space: pre;
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+
+
+/* Código */
+
+pre {
+  background-color: #111827;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+/* Botones e inputs */
+
+input {
+  padding: 8px;
+  margin: 5px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Resultados */
+
+.resultado {
+  font-weight: bold;
+  color: #1e3a8a;
+}
+
+/* Canvas del fractal */
+
+canvas {
+  background-color: white;
+  border: 1px solid #999999;
+  display: block;
+  margin: 15px auto;
+}
+
+/* Pie de página */
+
+footer {
+  background-color: #111827;
+  color: #cccccc;
+  text-align: center;
+  padding: 20px;
+}

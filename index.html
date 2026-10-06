@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Recursividad en Algoritmos</title>
+
+  <!-- Conecta el archivo de estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ================= PORTADA ================= -->
+
+  <header>
+    <h1>Recursividad en Algoritmos</h1>
+    <p><em><strong>Divide y vencerás</strong></em></p>
+  </header>
+
+  <!-- ================= MENÚ ================= -->
+
+  <nav>
+    <a href="#introduccion">Introducción</a>
+    <a href="#definicion">Definición</a>
+    <a href="#procedimientos">Procedimientos</a>
+    <a href="#caracteristicas">Características</a>
+    <a href="#complejidad">Complejidad</a>
+    <a href="#factorial">Factorial</a>
+    <a href="#fibonacci">Fibonacci</a>
+    <a href="#hanoi">Torres de Hanói</a>
+    <a href="#fractales">Fractales</a>
+  </nav>
+
+  <main>
+
+    <!-- =========================================
+         1. INTRODUCCIÓN
+         ========================================= -->
+
+    <section id="introduccion">
+      <h2>Introducción</h2>
+
+      <p>
+        La recursividad es una técnica importante en las ciencias computacionales. Permite
+        resolver un problema grande dividiéndolo en problemas más pequeños que tienen la misma
+        forma que el problema original.
+      </p>
+
+      <p>
+        En esta página se explica qué es la recursividad, cómo funcionan los procedimientos
+        recursivos, cuáles son sus características, cómo se analiza su complejidad y cómo se
+        aplican en ejemplos como el factorial, Fibonacci, Torres de Hanói y fractales.
+      </p>
+    </section>
+
+    <!-- =========================================
+         2. DEFINICIÓN DE RECURSIVIDAD
+         ========================================= -->
+
+    <section id="definicion">
+      <h2>Definición de recursividad</h2>
+
+      <p>
+        La recursividad ocurre cuando una función se llama a sí misma para resolver una parte
+        más pequeña del mismo problema. El proceso continúa hasta llegar a un caso base.
+      </p>
+
+      <div class="caja">
+        problema(n) = resultado directo si n es el caso base <br>
+        problema(n) = problema(n - 1) si n no es el caso base
+      </div>
+
+      <p>
+        <strong>Caso base:</strong> es la condición que detiene la recursión. <br>
+        <strong>Caso recursivo:</strong> es cuando la función se llama a sí misma con un valor
+        más pequeño.
+      </p>
+
+      <p>
+        Por ejemplo, para calcular el factorial de 4, primero se calcula el factorial de 3,
+        después el de 2, luego el de 1 y finalmente el de 0.
+      </p>
+    </section>
+
+    <!-- =========================================
+         3. PROCEDIMIENTOS RECURSIVOS
+         ========================================= -->
+
+    <section id="procedimientos">
+      <h2>Procedimientos recursivos y sus aplicaciones</h2>
+
+      <p>
+        Un procedimiento recursivo es una función que puede llamarse a sí misma durante su
+        ejecución. Cada llamada guarda su información en la memoria del programa, conocida como
+        pila de llamadas.
+      </p>
+
+      <h3>Aplicaciones de la recursividad</h3>
+
+      <ul>
+        <li>Cálculos matemáticos, como factorial y Fibonacci.</li>
+        <li>Recorrido de estructuras de datos, como árboles y listas.</li>
+        <li>Algoritmos de búsqueda y ordenamiento.</li>
+        <li>Problemas de juegos y rompecabezas, como Torres de Hanói.</li>
+        <li>Dibujo de figuras repetitivas, como los fractales.</li>
+      </ul>
+
+      <div class="caja">
+        Función recursiva <br>
+        ├── Llamada 1: problema(n) <br>
+        ├── Llamada 2: problema(n - 1) <br>
+        ├── Llamada 3: problema(n - 2) <br>
+        └── Caso base: resultado directo
+      </div>
+    </section>
+
+    <!-- =========================================
+         4. CARACTERÍSTICAS
+         ========================================= -->
+
+    <section id="caracteristicas">
+      <h2>Características de la recursividad</h2>
+
+      <table>
+        <tr>
+          <th>Característica</th>
+          <th>Descripción</th>
+        </tr>
+
+        <tr>
+          <td>Autorreferencia</td>
+          <td>La función se llama a sí misma.</td>
+        </tr>
+
+        <tr>
+          <td>Caso base</td>
+          <td>Condición que detiene la recursión.</td>
+        </tr>
+
+        <tr>
+          <td>Caso recursivo</td>
+          <td>La función se llama con un valor más pequeño.</td>
+        </tr>
+
+        <tr>
+          <td>Reducción del problema</td>
+          <td>Cada llamada se acerca al caso base.</td>
+        </tr>
+
+        <tr>
+          <td>Uso de memoria</td>
+          <td>Cada llamada ocupa espacio en la pila de llamadas.</td>
+        </tr>
+
+        <tr>
+          <td>Riesgo de error</td>
+          <td>Si falta el caso base, la función puede llamarse infinitamente.</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- =========================================
+         5. COMPLEJIDAD COMPUTACIONAL
+         ========================================= -->
+
+    <section id="complejidad">
+      <h2>Complejidad computacional en algoritmos recursivos</h2>
+
+      <p>
+        La complejidad computacional indica cuánto tiempo o memoria necesita un algoritmo
+        cuando aumenta el tamaño del problema. En los algoritmos recursivos se analiza cuántas
+        llamadas se hacen y cuánto trabajo realiza cada llamada.
+      </p>
+
+      <table>
+        <tr>
+          <th>Algoritmo</th>
+          <th>Recurrencia</th>
+          <th>Complejidad</th>
+        </tr>
+
+        <tr>
+          <td>Factorial</td>
+          <td>T(n) = T(n - 1) + 1</td>
+          <td>O(n)</td>
+        </tr>
+
+        <tr>
+          <td>Fibonacci recursivo simple</td>
+          <td>T(n) = T(n - 1) + T(n - 2) + 1</td>
+          <td>Aproximadamente O(2^n)</td>
+        </tr>
+
+        <tr>
+          <td>Torres de Hanói</td>
+          <td>T(n) = 2T(n - 1) + 1</td>
+          <td>O(2^n)</td>
+        </tr>
+
+        <tr>
+          <td>Triángulo de Sierpinski</td>
+          <td>T(n) = 3T(n - 1) + 1</td>
+          <td>O(3^n)</td>
+        </tr>
+      </table>
+
+      <p>
+        El factorial crece de forma lineal. En cambio, Fibonacci recursivo simple, Torres de
+        Hanói y los fractales pueden crecer de forma exponencial cuando aumenta el tamaño del
+        problema.
+      </p>
+    </section>
+
+    <!-- =========================================
+         6. FACTORIAL
+         ========================================= -->
+
+    <section id="factorial">
+      <h2>Factorial</h2>
+
+      <p>
+        El factorial de un número se calcula multiplicando ese número por todos los números
+        anteriores hasta llegar a 1.
+      </p>
+
+      <div class="caja">
+        0! = 1 <br>
+        5! = 5 × 4 × 3 × 2 × 1 = 120
+      </div>
+
+      <pre>
+function factorial(n) {
+  if (n == 0) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+      </pre>
+
+      <div class="caja">
+        factorial(4) <br>
+        = 4 * factorial(3) <br>
+        = 4 * 3 * factorial(2) <br>
+        = 4 * 3 * 2 * factorial(1) <br>
+        = 4 * 3 * 2 * 1 <br>
+        = 24
+      </div>
+
+      <p>
+        <label>Escribe un número:</label>
+        <input type="number" id="numeroFactorial" value="5">
+        <button onclick="calcularFactorial()">Calcular</button>
+      </p>
+
+      <p id="resultadoFactorial" class="resultado"></p>
+    </section>
+
+    <!-- =========================================
+         7. FIBONACCI
+         ========================================= -->
+
+    <section id="fibonacci">
+      <h2>Fibonacci</h2>
+
+      <p>
+        En la sucesión de Fibonacci, cada número es la suma de los dos anteriores.
+      </p>
+
+      <div class="caja">
+        0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+      </div>
+
+      <pre>
+function fibonacci(n) {
+  if (n == 0) {
+    return 0;
+  }
+  if (n == 1) {
+    return 1;
+  }
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+      </pre>
+
+      <div class="caja">
+        fibonacci(4) <br>
+        = fibonacci(3) + fibonacci(2) <br>
+        = 2 + 1 <br>
+        = 3
+      </div>
+
+      <p>
+        <label>Escribe una posición:</label>
+        <input type="number" id="numeroFibonacci" value="6">
+        <button onclick="calcularFibonacci()">Calcular</button>
+      </p>
+
+      <p id="resultadoFibonacci" class="resultado"></p>
+    </section>
+
+    <!-- =========================================
+         8. TORRES DE HANÓI
+         ========================================= -->
+
+    <section id="hanoi">
+      <h2>Torres de Hanói</h2>
+
+      <p>
+        El objetivo es mover los discos de la torre A a la torre C, usando la torre B como
+        ayuda. No se puede colocar un disco grande encima de un disco pequeño.
+      </p>
+
+      <div class="caja">
+        1. Mover n - 1 discos de A a B. <br>
+        2. Mover el disco más grande de A a C. <br>
+        3. Mover n - 1 discos de B a C.
+      </div>
+
+      <pre>
+function hanoi(n, origen, destino, auxiliar) {
+  if (n == 1) {
+    console.log("Mover disco 1 de " + origen + " a " + destino);
+    return;
+  }
+
+  hanoi(n - 1, origen, auxiliar, destino);
+  console.log("Mover disco " + n + " de " + origen + " a " + destino);
+  hanoi(n - 1, auxiliar, destino, origen);
+}
+      </pre>
+
+      <p>
+        <label>Número de discos:</label>
+        <input type="number" id="numeroHanoi" value="3">
+        <button onclick="resolverHanoi()">Resolver</button>
+      </p>
+
+      <p id="resultadoHanoi" class="resultado"></p>
+
+      <pre id="movimientosHanoi"></pre>
+    </section>
+
+    <!-- =========================================
+         9. FRACTALES
+         ========================================= -->
+
+    <section id="fractales">
+      <h2>Fractales</h2>
+
+      <p>
+        Un fractal es una figura que se repite en partes más pequeñas. Un ejemplo conocido es
+        el triángulo de Sierpinski.
+      </p>
+
+      <div class="caja">
+        Nivel 0:        Nivel 1:        Nivel 2 <br>
+        <br>
+         /\              /\              /\
+        /  \            /__\            /__\
+       /    \          /\  /\          /\  /\
+      /______\        /__\/__\        /__\/__\
+                                     /\      /\
+                                    /__\    /__\
+                                   /\  /\  /\  /\
+                                  /__\/__\/__\/__\
+      </div>
+
+      <p>
+        Cada triángulo se divide en tres triángulos más pequeños. Después, cada uno de esos
+        triángulos se divide otra vez.
+      </p>
+
+      <p>
+        <label>Nivel del fractal:</label>
+        <input type="number" id="nivelFractal" value="3">
+        <button onclick="dibujarFractal()">Dibujar</button>
+      </p>
+
+      <canvas id="lienzo" width="400" height="300"></canvas>
+    </section>
+
+    <!-- =========================================
+         CONCLUSIÓN
+         ========================================= -->
+
+    <section id="conclusion">
+      <h2>Conclusión</h2>
+
+      <p>
+        La recursividad es importante en las ciencias computacionales porque permite resolver
+        problemas complejos dividiéndolos en problemas más pequeños.
+      </p>
+
+      <p>
+        Es útil en cálculos matemáticos, estructuras de datos, algoritmos de búsqueda,
+        ordenamiento y gráficos. Sin embargo, debe usarse con cuidado porque puede consumir
+        mucha memoria si se realizan demasiadas llamadas.
+      </p>
+    </section>
+
+    <!-- =========================================
+         REFERENCIAS IEEE
+         ========================================= -->
+
+    <section id="referencias">
+      <h2>Referencias</h2>
+
+      <ol>
+        <li>
+          Universidad de Cantabria, <em>Fundamentos de Computación: Bloque 3</em>. [PDF].
+          España: OCW Universidad de Cantabria, s. f. [En línea]. Disponible:
+          https://ocw.unican.es/pluginfile.php/2074/course/section/1839/bloque3.pdf
+        </li>
+
+        <li>
+          MIT OpenCourseWare, “6.0001 Introduction to Computer Science and Programming in
+          Python: Recursion, Dictionaries,” Massachusetts Institute of Technology, 2016.
+          [En línea]. Disponible:
+          https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/876348c652c5353daccc96e1b7d577bb_MIT6_0001F16_Lec6.pdf
+        </li>
+
+        <li>
+          Universidad de Málaga, “Tema 3. Recursividad. Introducción,” Universidad de Málaga,
+          s. f. [En línea]. Disponible:
+          http://www.lcc.uma.es/~jlleivao/algoritmos/tt3.pdf
+        </li>
+
+        <li>
+          MIT OpenCourseWare, “Recurrences 1: The Towers of Hanoi,” Massachusetts Institute of
+          Technology, 2005. [En línea]. Disponible:
+          https://dspace.mit.edu/bitstream/handle/1721.1/104427/6-042j-spring-2005/contents/lecture-notes/l12_recur2.pdf
+        </li>
+
+        <li>
+          MDN Web Docs, “Recursion,” Mozilla Developer Network, 2025. [En línea]. Disponible:
+          https://developer.mozilla.org/en-US/docs/Glossary/Recursion
+        </li>
+
+        <li>
+          W3Schools, “What is Recursion?,” W3Schools, s. f. [En línea]. Disponible:
+          https://www.w3schools.com/programming/prog_recursion.php
+        </li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer>
+    Página educativa sobre recursividad.
+  </footer>
+
+  <!-- Conecta el archivo de JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
