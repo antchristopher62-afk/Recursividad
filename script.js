@@ -100,7 +100,7 @@ function resolverHanoi() {
   hanoi(numero, "A", "C", "B");
 
   // Muestra los resultados
-  resultado.innerHTML = "Se necesitan " + Math.pow(2, numero) - 1 + " movimientos.";
+  resultado.innerHTML = "Se necesitan " + (Math.pow(2, numero) - 1) + " movimientos.";
   movimientos.innerHTML = lista;
 }
 
